@@ -14,7 +14,7 @@ df = df.dropna(
 
 #  movies vs tv shows
 type_count = df['type'].value_counts()
-print(type_count)
+# print(type_count)
 
 #  creates the area for figure
 plt.figure(figsize=(6, 4))
@@ -28,6 +28,14 @@ plt.tight_layout()
 plt.savefig('movies_vs_tvshows.png')
 plt.show()
 
-print('hello')
+#  rating distribution
+rating_counts = df['rating'].value_counts()
+# print(rating_counts)
 
-
+plt.figure(figsize=(8,6))
+#  pie chart
+plt.pie(rating_counts, labels=rating_counts.index , autopct='%1.1f%%' , startangle=90)
+plt.title('Percentage of content rating')
+plt.tight_layout()
+plt.savefig('content_rating.png')
+plt.show()
