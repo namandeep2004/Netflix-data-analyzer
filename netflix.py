@@ -28,5 +28,6 @@ plt.tight_layout()
 plt.savefig('movies_vs_tvshows.png')
 plt.show()
 
+print('hello')
 
 
